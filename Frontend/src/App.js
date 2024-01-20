@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Component/Login';
 import FogotPWD from './Component/FogotPWD';
 import Form from './Component/Form';
-import './App.css';
+import App_Css from  './App.css';
 
 
 import ReactDOM from 'react-dom/client';
@@ -16,8 +16,8 @@ function App() {
     <Router>
       <div className='App'>
         <Navbar />
-
-        <div className='content'>
+        </div>
+        <div className={App_Css.content}>
           <Routes>
 
             <Route exact path="/" element={<Home />} />
@@ -42,7 +42,7 @@ function App() {
 
         <Footer /> {/* Assuming Footer is a common component */}
 
-      </div>
+      
     </Router>
   );
 }

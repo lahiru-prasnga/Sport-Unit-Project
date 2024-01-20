@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login_css from './Login.module.css'
-import { Link } from "react-router-dom";
-//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import validation from "./Validation.js";
-//import ForgotPWD from './FogotPWD';
+import ForgotPWD from './FogotPWD';
 import { useLogin } from '../hooks/useLogin.js'
 import isEmpty from "../isEmpty.js";
 
@@ -21,10 +21,10 @@ function Login() {
   const { login, error, isLoading } = useLogin()
   const handleInput = (e) => {
     setValues({ ...values, [e.target.name]: [e.target.value] });
-    if (e.target.type === 'email')
-      setEmail(e.target.value)
-    else (e.target.type === 'password')
-    setPassword(e.target.value)
+    // if (e.target.type === 'email')
+    //   setEmail(e.target.value)
+    // else (e.target.type === 'password')
+    // setPassword(e.target.value)
   };
 
   function handleValidation(e) {
