@@ -8,12 +8,14 @@ import Form from './Component/SignUpForm/SignUpForm';
 import App_Css from './App.module.css';
 import EmailVerification from './Component/EmailVerification/EmailVerification';
 import LandPage from './Component/LandPage/LandPage';
-import ViewFacility from './Component/ViewFacility/ViewFacility';
+import ViewFacility from './Component/viewFacility/ViewFacility';
 
 import UserProfile from './Component/NavBar/UserProfile';
 import Facility from './Component/Facility/Facility';
 import UserHistory from './Component/History/UserHistory';
 import Profile from './Component/UserProfile/Profile';
+
+import Booking from './Component/Booking/Booking'
 
 
 
@@ -41,15 +43,16 @@ function App() {
             <Route path='/verifyEmail/:userEmail' element={<EmailVerification />} />
             <Route path="/landpage" element={<LandPage />} />
             <Route path="/viewFacilities" element={<ViewFacility />} />
-            <Route path="/facility/:facilityId" element={<Facility />} />
+            {/* <Route path="/facility/:facilityId" element={<Facility />} /> */}
+            <Route path="/facility" element={<Facility />} />
             <Route path="/history" element={<UserHistory />} />
             <Route path="/profile" element={<Profile/>}/>
 
 
             <Route path='/userProfile' element={<UserProfile />} />
 
-
-
+            <Route path='/booking' element={<Booking/>}/>
+            
 
 
 
