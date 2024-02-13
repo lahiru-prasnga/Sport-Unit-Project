@@ -1,0 +1,84 @@
+.content {
+  padding: 20px;
+  background-image: url("../../Images/home.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-left: 0;
+}
+
+.contentImage {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5px;
+}
+
+.body {
+  margin: 30px;
+  padding: 0;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imageListContainer {
+  width: calc(90% + 40px);
+  height: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.imageListItem {
+  margin: 0 20px;
+  margin-right: 20px;
+}
+
+.buttonContainer {
+  margin-top: 70px;
+  margin-right: 0;
+  direction: column;
+  margin-left: 0;
+  width: 30%;
+}
+
+.overAllCalendarbtnConatiner {
+  margin-bottom: 30px;
+}
+
+.playgroundbtnConatiner {
+  margin-bottom: 30px;
+}
+
+.gymnasiumbtnConatiner {
+  margin-bottom: 30px;
+}
+.calendarContainer{
+  margin-top: 30px;
+  width: 70%;
+}
+
+
+.overallBtn,
+.playgroundBtn,
+.gymnasiumBtn {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.cardText {
+  color: black;
+  font-style: italic;
+}
+
+.cardDesc {
+  color: black;
+}
+
+.cardHolder {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
