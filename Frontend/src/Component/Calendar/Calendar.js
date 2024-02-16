@@ -6,6 +6,8 @@ import  './Calendar.css';
 const Calendar = ({bookings}) => {
     console.log(bookings)
 
+   
+
     const events = bookings.map(booking => ({
        
         title: booking.description, 
@@ -59,6 +61,11 @@ const Calendar = ({bookings}) => {
         };
 
     }
+   
+    // const handleSelectDate = (date) => {
+    //     console.log('Selected Date:', date);
+    //     onSelectDate(date);
+    // };
 
     
     return ( 
@@ -70,7 +77,9 @@ const Calendar = ({bookings}) => {
                 events={events}
                 eventPropGetter={eventStyleGetter}
                 style={{height:500,margin:0,width:'100%'}}
-             
+//----------------------------------------------
+                // onSelectSlot={handleSelectDate}
+                // onSelectEvent={handleSelectDate} 
             />
              <div className="legend">
                 <div className="legend-item">

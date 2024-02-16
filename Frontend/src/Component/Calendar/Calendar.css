@@ -173,6 +173,7 @@ button.rbc-input::-moz-focus-inner {
   padding: 0 10px;
   text-align: center;
   color: black;
+  
 }
 .rbc-toolbar button {
   color: #373a3c;
@@ -283,6 +284,7 @@ button.rbc-input::-moz-focus-inner {
 
 .rbc-event-label {
   font-size: 80%;
+  
 }
 
 .rbc-event-overlaps {
@@ -825,6 +827,7 @@ button.rbc-input::-moz-focus-inner {
   background-color: #74ad31;
   pointer-events: none;
 }
+
 .legend {
   display: flex;
   flex-wrap: wrap;
@@ -833,14 +836,15 @@ button.rbc-input::-moz-focus-inner {
 .legend-item {
   display: flex;
   align-items: center;
-  margin-right: 20px; 
+  margin-right: 20px; /* Adjust spacing between legend items */
 }
 
 .legend-color {
   width: 20px;
   height: 20px;
-  margin-right: 5px; 
+  margin-right: 5px; /* Adjust spacing between color box and label */
 }
+
 .legend-label{
   color: black;
 }
