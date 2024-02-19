@@ -1,0 +1,46 @@
+.ant-table {
+  background-color: black;
+}
+
+.ant-table-container {
+  background-color: #ffff0000;
+}
+
+.ant-table-cell {
+  background-color: rgba(228, 206, 174, 0.675) !important;
+  color: black !important;
+  text-align: left;
+}
+
+.ant-btn {
+  color: black !important;
+  background-color: brown !important;
+}
+
+.ant-modal-body {
+  background-color: rgb(228, 206, 174) !important;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.model-pharagraph {
+  color: black;
+
+  padding: auto;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.ant-modal-close-icon {
+  background-color: rgba(148, 16, 16, 0.737);
+}
+
+.admin-dashboard-header {
+  background-color: #ffff0078;
+  margin: 0px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
