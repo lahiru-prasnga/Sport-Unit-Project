@@ -44,21 +44,21 @@ const BookingApproval = () => {
       dataIndex: "bookingDate",
       key: "bookingDate",
     },
-    // {
-    //   title: "Booking Time",
-    //   dataIndex: "Time",
-    //   key: "Time",
-    // },
-    // {
-    //   title: "Designation",
-    //   dataIndex: "designation",
-    //   key: "designation",
-    // },
-    // {
-    //   title: "Description",
-    //   dataIndex: "description",
-    //   key: "description",
-    // },
+    {
+      title: "Booking Time",
+      dataIndex: "Time",
+      key: "Time",
+    },
+    {
+      title: "Designation",
+      dataIndex: "designation",
+      key: "designation",
+    },
+    {
+      title: "Description",
+      dataIndex: "description",
+      key: "description",
+    },
     {
       title: "Status",
       dataIndex: "status",
