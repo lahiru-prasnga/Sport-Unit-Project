@@ -7,7 +7,8 @@ const {
   deleteBooking,
   uploadNIC,
   uploadLetter,
-  getBooking
+  getBooking,
+  acceptBooking
 } = require("../../controllers/bookingController");
 
 const router = express.Router();
@@ -68,5 +69,14 @@ router.post('/uploadLetter/:bookingID',
 router.post('/getBooking/:userID',
   getBooking
 )
+
+//@route PUT api/booking/getBooking/:bookingID
+//@desc get all bookings according to bookingID
+//@access public
+//@developer Nimeshika Dilshani
+router.post('/acceptBooking/:bookingID',
+  acceptBooking
+)
+
 
 module.exports = router;
