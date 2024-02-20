@@ -29,11 +29,11 @@ const BookingApproval = () => {
       dataIndex: "organizationName",
       key: "organizationName",
     },
-    // {
-    //   title: "organization Address",
-    //   dataIndex: "organizationAddress",
-    //   key: "facility",
-    // },
+    {
+      title: "organization Address",
+      dataIndex: "organizationAddress",
+      key: "facility",
+    },
     {
       title: "Selected Facility",
       dataIndex: "facility",
