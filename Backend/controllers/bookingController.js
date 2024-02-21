@@ -435,6 +435,114 @@ const acceptBooking = async (req, res) => {
 
 
 
+//controller rejectBooking()
+//description reject booking according to userID
+//developer Primalsha Chamodi
+
+const rejectBooking = async (req, res) => {
+  if (req.user.userType === "director") {
+        let bookingData = req.body;
+        bookingData.id = req.params.bookingID;
+        bookingData.status = req.params.status;
+        console.log('res')
+    
+    
+        try {
+          if (bookingData.status === "pending") {
+            await Booking.findByIdAndUpdate(bookingData.id, { status: "rejected" });
+            console.log("Booking rejected");
+            return res.send("Booking rejected");
+          } else {
+            console.log("Booking status is not pending");
+            return res.status(400).send("Booking status is not pending");
+          }
+        } catch (error) {
+          console.error("Error rejecting booking:", error);
+          return res.status(500).send("Error rejecting booking");
+        }
+      } else {
+        console.log("User is not authorized to reject bookings");
+        return res.status(403).send("User is not authorized to reject bookings");
+      }
+    
+  };
+
+
+// const rejectBooking = async (req, res) => {
+//   console.log('res')
+
+//   if (req.user.userType === "director") {
+//     let bookingData = req.body;
+//     bookingData.id = req.params.bookingID;
+//     const { errors, isValid } = await validateUpdateBookingData(bookingData);
+//     if (!isValid) {
+//       var errorMsg = ''
+//       Object.values(errors).forEach(error => {
+//         errorMsg += error + '\r\n'
+//       })
+//       errorMsg = errorMsg.trim()
+//       res.status(400).send(errorMsg);
+//     } else {
+//       try {
+//         const existingBooking = await Booking.findById(bookingData.id);
+//         if (!existingBooking) {
+//           return res.status(404).send("Booking not found");
+//         }
+
+//         if (
+
+//           bookingData.postponeRequested === true
+//         ) {
+//           const booking = await Booking.findByIdAndUpdate(
+//             bookingData.id,
+//             {
+            
+//               status: bookingData.status,
+//             },
+//             { new: true }
+//           );
+
+//           if (booking) {
+//             console.log("booking data updated");
+//             return res.send(booking);
+//           }
+
+//           const user = await User.findById(existingBooking.userID);
+//           if (!user) {
+//             return res.status(404).send('User not found');
+//           }
+
+//           //sending email to the user 
+//           try {
+//             await sendEmail(
+//               user.email,
+//               "Booking update notification",
+//               "Your booking dates has been updated",
+//             );
+//             console.log('Booking data updated and email sent to the user');
+
+//           } catch (error) {
+//             console.error('Error sending email ', error);
+//             return res.status(500).send('Error sending email ');
+//           }
+//         }
+//       } catch (error) {
+//         console.error("Error updating booking data", error);
+//         return res.status(500).send("Error updating  data");
+//       }
+//     }
+
+
+//   } else {
+//     res.status(401).send("you are not authorized to update booking data");
+//   }
+// };
+
+
+
+
+
+
 
 module.exports = {
   createBooking,
@@ -445,4 +553,5 @@ module.exports = {
   uploadLetter,
   getBooking,
   acceptBooking,
+  rejectBooking
 };
