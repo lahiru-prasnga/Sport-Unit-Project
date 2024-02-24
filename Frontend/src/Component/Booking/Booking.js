@@ -358,7 +358,7 @@ const Booking = () => {
           <label>
             User NIC :<br />
             <input
-              accept="image/*"
+              // accept="image/*"
               type="file"
               multiple
               onChange={handleFileChange}
@@ -446,7 +446,7 @@ const Booking = () => {
             Permission Letter:
             <br />
             <input
-              accept="image/*,.pdf"
+              // accept="image/*,.pdf"
               type="file"
               multiple
               onChange={handleFileChange}
