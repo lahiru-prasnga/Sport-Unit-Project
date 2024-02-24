@@ -76,6 +76,7 @@ router.post('/getBooking/:userID',
 //@access public
 //@developer Nimeshika Dilshani
 router.post('/acceptBooking/:bookingID',
+passport.authenticate("jwt", { session: false }),
   acceptBooking
 )
 

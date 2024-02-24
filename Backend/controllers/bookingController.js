@@ -338,11 +338,12 @@ const getBooking=async(req,res)=>{
 
 const acceptBooking = async (req, res) => {
   if (req.user.userType === "director") {
-        let bookingData = req.body;
+        let bookingData=await Booking.findById(req.params.bookingID)
         bookingData.id = req.params.bookingID;
-        bookingData.status = req.params.status;
+        
         console.log('res')
-    
+    console.log(bookingData.status === 'pending')
+    console.log(bookingData.status)
         try {
           if (bookingData.status === "pending") {
             await Booking.findByIdAndUpdate(bookingData.id, { status: "accepted" });
