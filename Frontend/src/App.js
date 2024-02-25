@@ -39,7 +39,7 @@ function App() {
             <Route path="/history" element={<UserHistory />} />
             <Route path="/profile" element={<Profile />} />
             <Route path='/userProfile' element={<UserProfile />} />
-            <Route path='/bookingForm' element={<Booking />} />
+            <Route path='/booking' element={<Booking />} />
 
             <Route path="/userProfile" element={<UserProfile />} />
 
