@@ -85,7 +85,8 @@ passport.authenticate("jwt", { session: false }),
 //@desc reject bookings according to bookingId
 //@access public
 //@developer Primalsha Chamodi
-router.put('/rejectBooking/:bookingID',
+router.post('/rejectBooking/:bookingID',
+passport.authenticate("jwt", { session: false }),
   rejectBooking
 )
 

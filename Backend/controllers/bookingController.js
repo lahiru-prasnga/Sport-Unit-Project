@@ -374,12 +374,12 @@ const acceptBooking = async (req, res) => {
 
 const rejectBooking = async (req, res) => {
   if (req.user.userType === "director") {
-        let bookingData = req.body;
+        let bookingData=await Booking.findById(req.params.bookingID)
         bookingData.id = req.params.bookingID;
-        bookingData.status = req.params.status;
-        console.log('res')
-    
-    
+        
+        console.log('response')
+    console.log(bookingData.status === 'pending')
+    console.log(bookingData.status)
         try {
           if (bookingData.status === "pending") {
             await Booking.findByIdAndUpdate(bookingData.id, { status: "rejected" });
@@ -390,15 +390,15 @@ const rejectBooking = async (req, res) => {
             return res.status(400).send("Booking status is not pending");
           }
         } catch (error) {
-          console.error("Error rejecting booking:", error);
-          return res.status(500).send("Error rejecting booking");
+          console.error("Error reject booking:", error);
+          return res.status(500).send("Error reject booking");
         }
       } else {
         console.log("User is not authorized to reject bookings");
         return res.status(403).send("User is not authorized to reject bookings");
       }
     
-  };
+};
 
 
 // const rejectBooking = async (req, res) => {
