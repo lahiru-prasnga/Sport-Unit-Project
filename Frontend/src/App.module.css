@@ -1,6 +1,7 @@
 .content {
 
     background-image: url("./Images/home.jpg");
+    /* background-color: rgb(213, 181, 140); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

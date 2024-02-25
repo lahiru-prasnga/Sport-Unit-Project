@@ -9,6 +9,8 @@ import validation from "./Validation.js";
 import isEmpty from "../../isEmpty.js";
 import axios from 'axios';
 
+import Login_img from '../../Images/login img03.jpg'
+
 
 
 function Login() {
@@ -110,10 +112,11 @@ function Login() {
           <div className={Login_css.login_container}>
             <div className={Login_css.login_form}>
               <div className="form">
-                <form className="border p-3" >
-                  <div className={Login_css.header}>
+                <div className={Login_css.log_form}>
+                <form className="border p-3"style={{ borderRadius: "10px" }} >
+                  {/* <div className={Login_css.header}>
                     <h2>Login</h2>
-                  </div>
+                  </div> */}
                   <div className={Login_css.input_login}>
                     <label>Email:</label>
                     <input
@@ -171,15 +174,32 @@ function Login() {
                     <Link to="/signup" className={Login_css.signup_link}>
                       Click here to Create Account!</Link>
                   </p>
-                </form>
-              </div>
-            </div>
 
+                  
+                </form>
+                </div>
+                <div className={Login_css.log_Info}>
+                <div className={Login_css.header}>
+                    <h2>Login</h2>
+                  </div>
+                 <img src={Login_img} width={"250px"} height={"250px"} style={{borderRadius: "50%" ,boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+    transition: "transform 0.2s ease-in-out",}}>
+
+                 </img>
+                </div>
+              </div>
+
+              
+
+            </div>
+           
           </div>
+          
+    </div>
 
         </div>
       </div>
-    </div>
+      
 
 
   );

@@ -262,7 +262,7 @@ const Booking = () => {
   const handleRadioChange = (event) => {
     setFormType(event.target.value);
   };
-  
+
   const handleFieldClick = (fieldName) => {
     setClickedField(fieldName);
   };
@@ -325,6 +325,7 @@ const Booking = () => {
             />
           </label>
           <br />
+          
           {/* <label>
             Time:
             <br />
@@ -338,6 +339,7 @@ const Booking = () => {
             </LocalizationProvider>
           </label>
           <br /> */}
+          
           <label>
             NIC :<br />
             <input
@@ -346,12 +348,11 @@ const Booking = () => {
               multiple
               onChange={handleFileChange}
               onClick={() => handleFieldClick("NIC")}
-
               name="img"
             />{" "}
             {clickedField === "NIC" && (
-  <div style={{ color: "blue" }}>file format should be png,jpg</div>
-)}
+              <div style={{ color: "blue" }}>file format should be png,jpg</div>
+            )}
             <br />
           </label>
 
@@ -373,8 +374,10 @@ const Booking = () => {
               autoComplete="true"
             />{" "}
             {clickedField === "Name with Initials" && (
-  <div style={{ color: "brown" }}>Clicked on Name with Initials field</div>
-)}
+              <div style={{ color: "brown" }}>
+                Clicked on Name with Initials field
+              </div>
+            )}
             <br />
           </label>
           <label>
@@ -482,8 +485,8 @@ const Booking = () => {
           </label>
           <br />
           {clickedField === "Permission Letter" && (
-  <div style={{ color: "blue" }}>file format should be pdf</div>
-)}
+            <div style={{ color: "blue" }}>file format should be pdf</div>
+          )}
           <br />
         </div>
       </form>
