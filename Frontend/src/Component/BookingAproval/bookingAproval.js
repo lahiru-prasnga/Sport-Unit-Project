@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Table, Button, Modal, Input } from "antd";
 import axios from "axios";
 import "./bookingAproval.css";
+import moment from "moment";
 
-const BookingApproval = () => {
+const BookingApproval = ({ bookingDate, Time }) => {
   const [selectedBooking, setSelectedBooking] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [bookings, setBookings] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [comment, setComment] = useState("");
+  const dateOnly = moment(bookingDate).format("YYYY-MM-DD");
+  const timeOnly = moment(Time).format("HH:mm");
 
   // const mockBookingWithImages = {
   //   organizationName: "Sample Organization",
@@ -60,12 +63,9 @@ const BookingApproval = () => {
       title: "Booking Date",
       dataIndex: "bookingDate",
       key: "bookingDate",
+      render: (text, record) => dateOnly,
     },
-    // {
-    //   title: "Description",
-    //   dataIndex: "description",
-    //   key: "description",
-    // },
+
     {
       title: "Status",
       dataIndex: "status",
@@ -103,11 +103,12 @@ const BookingApproval = () => {
         className="ant-table-container"
         dataSource={bookings}
         columns={columns}
+        style={{ margin: "auto", width: "80%" }}
       />
 
       <Modal
-        className="ant-modal-content"
-        title="Booking Details"
+        className="ant-modal-content custom-model"
+        title="Booking Details  "
         visible={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
         footer={[
@@ -118,9 +119,11 @@ const BookingApproval = () => {
             Reject
           </Button>,
         ]}
+        style={{ margin: "auto" }}
       >
         {selectedBooking && (
           <>
+            <hr></hr>
             <p className="model-pharagraph">
               <strong className="model-pharagraph">Organization Name:</strong>{" "}
               {selectedBooking.organizationName}
@@ -137,11 +140,11 @@ const BookingApproval = () => {
             </p>
             <p className="model-pharagraph">
               <strong className="model-pharagraph">Booking Date:</strong>{" "}
-              {selectedBooking.bookingDate}
+              {dateOnly}
             </p>
             <p className="model-pharagraph">
               <strong className="model-pharagraph">Booking Time:</strong>{" "}
-              {selectedBooking.Time}
+              {timeOnly}
             </p>
             <p className="model-pharagraph">
               <strong className="model-pharagraph">Designation:</strong>{" "}

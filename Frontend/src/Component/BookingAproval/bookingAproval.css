@@ -7,14 +7,14 @@
 }
 
 .ant-table-cell {
-  background-color: rgba(228, 206, 174, 0.675) !important;
+  background-color: rgb(228, 206, 174) !important;
   color: black !important;
   text-align: left;
 }
 
 .ant-btn {
   color: black !important;
-  background-color: brown !important;
+  background-color: rgb(148, 16, 16) !important;
 }
 
 .ant-modal-body {
@@ -40,13 +40,28 @@
 }
 
 .ant-modal-close-icon {
-  background-color: rgba(148, 16, 16, 0.737);
+  background-color: rgb(148, 16, 16);
+  padding: 4px 2px;
+  margin-left: 33px;
+  margin-bottom: 15px;
+  margin-top: 3px;
 }
 
 .admin-dashboard-header {
-  background-color: #ffff0078;
-  margin: 0px;
+  background-color: #ffff0091;
+  margin: 10px 0px;
   color: black;
   text-align: center;
   font-weight: bold;
+}
+
+.ant-modal-title {
+  color: black !important;
+  background-color: #8a1538c0 !important;
+  padding: 0px 20px;
+}
+
+.ant-modal-content {
+  background-color: rgba(255, 255, 0, 0.52) !important;
+  width: 100%;
 }

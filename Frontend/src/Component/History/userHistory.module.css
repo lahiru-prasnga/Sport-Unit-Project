@@ -1,5 +1,3 @@
-
-
 .content {
   padding: 30px;
   background-image: url("../../Images/home.jpg");
@@ -23,7 +21,6 @@
   flex-direction: column;
 }
 
-
 .tableHead {
   background-color: #8a1538;
 }
@@ -31,9 +28,19 @@
 .tableBody {
   background-color: rgb(228, 206, 174);
 }
-.tableCell{
-
-  font-size: 18px;
+.tableCell {
+  font-size: 14px;
   color: white;
+  font-weight: bold;
 }
-
+.table {
+  margin-left: 0px;
+}
+.tableData {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+.hoveredRow:hover {
+  background-color: yellow; /* Change the color to whatever you want */
+}
